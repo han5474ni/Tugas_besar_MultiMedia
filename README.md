@@ -6,8 +6,8 @@ Proyek Filter Superpower adalah aplikasi berbasis Python yang dirancang untuk me
 
 | ![Yan](![image](https://github.com/user-attachments/assets/6f7ba801-ef3a-43bc-8a51-8f07b2264642)) | **Handayani** (122140166) | [@handayani](https://github.com/han5474ni) |
 |------------------------------------|----------------------------------|--------------------------------------|
-| ![](https://via.placeholder.com/60/FF0000/FFFFFF?text=Photo) | **Francois Novalentino Sinurat** (121140007) | [@Francois](https://github.com/FrancoisNoval) |
-| ![](https://via.placeholder.com/60/CCCCCC/000000?text=Icon) | **Dimas Azi Rajab Aizar** (121140135) | [@Dimas](https://github.com/DimasAzi24) |
+| ![francois](https://via.placeholder.com/60/FF0000/FFFFFF?text=Photo) | **Francois Novalentino Sinurat** (121140007) | [@Francois](https://github.com/FrancoisNoval) |
+| ![dimas](https://via.placeholder.com/60/CCCCCC/000000?text=Icon) | **Dimas Azi Rajab Aizar** (121140135) | [@Dimas](https://github.com/DimasAzi24) |
 
 ## Logbook Progress
 
