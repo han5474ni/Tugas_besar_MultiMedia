@@ -4,7 +4,7 @@ Proyek Filter Superpower adalah aplikasi berbasis Python yang dirancang untuk me
 
 # Anggota Tim
 
-| ![Yan](![image](https://github.com/user-attachments/assets/6f7ba801-ef3a-43bc-8a51-8f07b2264642)) | **Handayani** (122140166) | [@handayani](https://github.com/han5474ni) |
+| ![Yan]([https://github.com/user-attachments/assets/6f7ba801-ef3a-43bc-8a51-8f07b2264642](https://media-hosting.imagekit.io/4b7495619c6c47f1/Cuplikan%20layar%202025-05-08%20111417.png?Expires=1841285894&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=j2057yHbeRje6tU6MS~qt~Zi6rf20AAIBfoI67lOf1U6TWijHCqw8ROwWM6efE61ehgGdqj4HJJSlDYP8qcG71RfFZBMQjKtv31cNcFlsQysS3vUQx7E5yKhFb~tzuoWUEO8iP2o2otPHsM1qB4qQWPaYl~bhEXI0ClTT5W4JlHNNV4lsMYUmbY8qxvdjqquqnnA3TDWslSNAzMRaGpMyDUHE-fou4R5U3kUTqok4~SEszIPjho3jJm6EBqm6CXZD193FzKDBVxph3CmEu8W1962sHZNNLConX5gcwUqdsniTS47Az1UKILIY3JqBQtmVnSxBLOZsQCTWLm7-9NSGQ__))) | **Handayani** (122140166) | [@handayani](https://github.com/han5474ni) |
 |------------------------------------|----------------------------------|--------------------------------------|
 | ![francois](https://via.placeholder.com/60/FF0000/FFFFFF?text=Photo) | **Francois Novalentino Sinurat** (121140007) | [@Francois](https://github.com/FrancoisNoval) |
 | ![dimas](https://via.placeholder.com/60/CCCCCC/000000?text=Icon) | **Dimas Azi Rajab Aizar** (121140135) | [@Dimas](https://github.com/DimasAzi24) |
