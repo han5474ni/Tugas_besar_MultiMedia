@@ -6,6 +6,7 @@ import os
 
 # Inisialisasi kamera dan efek
 cap = cv2.VideoCapture(0)
+
 mp_hands = mp.solutions.hands
 hands = mp_hands.Hands(min_detection_confidence=0.7, max_num_hands=2)
 mp_draw = mp.solutions.drawing_utils
