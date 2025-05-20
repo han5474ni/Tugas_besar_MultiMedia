@@ -20,14 +20,16 @@ def load_effects(folder_path, flip_horizontal=True):
             gif = imageio.mimread(full_path)
             frames = []
             for f in gif:
-                bgr = cv2.cvtColor(np.array(f), cv2.COLOR_RGBA2BGR)
+                # Simpan frame sebagai RGBA (format numpy array)
+                rgba = np.array(f)
                 if flip_horizontal:
-                    bgr = cv2.flip(bgr, 1)
-                frames.append(bgr)
+                    rgba = cv2.flip(rgba, 1)
+                frames.append(rgba)
             effects[name] = {
                 "type": "gif",
                 "frames": frames
             }
+
 
         elif ext == ".mp4":
             cap = cv2.VideoCapture(full_path)
@@ -49,7 +51,17 @@ def load_effects(folder_path, flip_horizontal=True):
 # Fungsi overlay
 def overlay_effect(base_frame, effect_frame, x, y, size=200):
     h, w = base_frame.shape[:2]
-    effect_resized = cv2.resize(effect_frame, (size, size))
+
+    # Resize effect frame (RGBA)
+    effect_resized = cv2.resize(effect_frame, (size, size), interpolation=cv2.INTER_AREA)
+
+    # Pisahkan channel warna dan alpha
+    if effect_resized.shape[2] == 4:
+        effect_rgb = effect_resized[:, :, :3]
+        alpha_mask = effect_resized[:, :, 3] / 255.0  # normalisasi alpha 0-1
+    else:
+        effect_rgb = effect_resized
+        alpha_mask = np.ones((size, size))
 
     x1 = x - size // 2
     y1 = y - size // 2
@@ -60,8 +72,12 @@ def overlay_effect(base_frame, effect_frame, x, y, size=200):
         return
 
     roi = base_frame[y1:y2, x1:x2]
-    blended = cv2.addWeighted(roi, 0.5, effect_resized, 0.5, 0)
-    base_frame[y1:y2, x1:x2] = blended
+
+    # Blend dengan alpha mask
+    for c in range(3):  # untuk channel BGR
+        roi[:, :, c] = (alpha_mask * effect_rgb[:, :, c] + (1 - alpha_mask) * roi[:, :, c]).astype(np.uint8)
+
+    base_frame[y1:y2, x1:x2] = roi
 
 # Load efek
 # Dapatkan path direktori kerja saat ini
@@ -99,9 +115,10 @@ while cap.isOpened():
 
     if results.multi_hand_landmarks:
         for i, hand_landmarks in enumerate(results.multi_hand_landmarks):
-            landmark = hand_landmarks.landmark[9]
-            cx = int(landmark.x * min_dim)
-            cy = int(landmark.y * min_dim)
+            points = [hand_landmarks.landmark[i] for i in [0, 1, 5, 9]]
+            cx = int(np.mean([p.x for p in points]) * min_dim)
+            cy = int(np.mean([p.y for p in points]) * min_dim)
+
 
             if i >= len(prev_positions):
                 prev_positions.append(None)
