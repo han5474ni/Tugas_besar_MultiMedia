@@ -16,6 +16,6 @@ Proyek Filter Superpower adalah aplikasi berbasis Python yang dirancang untuk me
 | 2      | [25/04/2025]  | - Mencari Referensi Proyek |
 | 3      | [02/05/2025]  | - Implementasi penuh program "SuperPower" menggunakan Python, OpenCV, dan MediaPipe. Fitur utama meliputi: deteksi tangan real-time, overlay efek api interaktif pada jari dan telapak tangan, UI tombol pemilihan filter efek video, serta rotasi dan masking efek agar terlihat dinamis. Telah dipush ke GitHub untuk dokumentasi dan kolaborasi. |
 | 4      | [08/05/2025]  | - Penyusunan Template Laporan Akhir link: https://www.overleaf.com/7171988215mcwqvnjyscxm#abf677 |
-| 5      | []  | - |
-| 6      | []  | - |
+| 5      | [21/05/2025]  | - Revisi kode |
+| 6      | [30/05/2025]  | - Penyusunan Laporan |
 
