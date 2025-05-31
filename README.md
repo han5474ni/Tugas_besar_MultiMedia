@@ -1,12 +1,12 @@
 # Kelompok ABC
-# SuperPower - Hand Tracking Effects
+# SuperPower - Hand Landmark Effects
 
 <div align="center">
   <img src="https://img.shields.io/badge/Python-3.7+-blue.svg" alt="Python Version">
   <img src="https://img.shields.io/badge/OpenCV-4.5+-green.svg" alt="OpenCV Version">
   <img src="https://img.shields.io/badge/MediaPipe-0.10+-orange.svg" alt="MediaPipe Version">
   <br>
-  <b>Real-time hand tracking with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b>
+  <b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b>
 </div>
 
 ## 📋 Tentang Proyek
