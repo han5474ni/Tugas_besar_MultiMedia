@@ -137,7 +137,7 @@ SuperPower/
 
 ## 🎥 Demo
 
-[![Tonton Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/VIDEO_ID)
+[![Tonton Demo](https://youtu.be/OW3rP_mNTUo)
 
 ## 🤝 Berkontribusi
 
@@ -149,15 +149,9 @@ Kontribusi sangat diterima! Berikut cara untuk berkontribusi:
 4. Push ke branch (`git push origin fitur/namafitur`)
 5. Buat Pull Request
 
-## 📜 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
 ## 🙏 Ucapan Terima Kasih
 
 - Dosen pengampu: Martin Clinton Tosima Manullang, S.T., M.T.
-- Tim pengembang MediaPipe
-- Komunitas Open Source
 - Rekan-rekan kelompok yang telah berkontribusi
 
 ---
