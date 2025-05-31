@@ -102,14 +102,6 @@ SuperPower/
 
 Template laporan akhir dapat diakses di [Overleaf](https://www.overleaf.com/7171988215mcwqvnjyscxm#abf677).
 
-## 🤝 Berkontribusi
-
-Kontribusi terbuka untuk pengembangan lebih lanjut. Silakan buat *pull request* atau *issue* baru.
-
-## 📜 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
 ---
 <div align="center">
   Dibuat dengan ❤️ untuk IF4021 - Sistem/Teknologi Multimedia
