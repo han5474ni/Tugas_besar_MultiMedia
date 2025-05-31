@@ -126,7 +126,7 @@ SuperPower/
 | Minggu | Tanggal       | Progress |
 |--------|---------------|----------|
 | 1 | 24/04/2025 | • Inisialisasi proyek<br>• Penyusunan rencana pengembangan |
-| 2 | 25/04/2025 | • Riset teknologi<br>• Pengumpulan referensi proyek serupa |
+| 2 | 25/04/2025 | • Riset teknologi<br>• Pengumpulan referensi proyek serupa <br>• https://vt.tiktok.com/ZSrvavKEX/ |
 | 3 | 02/05/2025 | • Implementasi deteksi tangan real-time<br>• Integrasi efek api dasar<br>• Pembuatan UI kontrol |
 | 4 | 08/05/2025 | • Pembuatan template laporan<br>• Dokumentasi kode |
 | 5 | 21/05/2025 | • Optimasi kode<br>• Perbaikan bug |
