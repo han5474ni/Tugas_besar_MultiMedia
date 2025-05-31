@@ -95,7 +95,7 @@ SuperPower/
 | 3      | [02/05/2025]  | - Implementasi penuh program "SuperPower" menggunakan Python, OpenCV, dan MediaPipe. Fitur utama meliputi: deteksi tangan real-time, overlay efek api interaktif pada jari dan telapak tangan, UI tombol pemilihan filter efek video, serta rotasi dan masking efek agar terlihat dinamis. Telah dipush ke GitHub untuk dokumentasi dan kolaborasi. |
 | 4      | [08/05/2025]  | - Penyusunan Template Laporan Akhir link: https://www.overleaf.com/7171988215mcwqvnjyscxm#abf677 |
 | 5      | [21/05/2025]  | - Revisi kode |
-| 6      | [30/05/2025]  | - Penyusunan Laporan |
+| 6      | [30/05/2025]  | - Penyusunan Laporan Bab 1, 2, dan 3 |
 | 7      | [31/05/2025]  | - Menambahkan fitur Finger Trail System pada hand tracking filter untuk meningkatkan interaktivitas visual. Implementasi meliputi: (1) Trail Tracking - sistem jejak garis yang mengikuti gerakan ujung jari saat gesture single finger aktif dengan menggunakan collections.deque untuk menyimpan maksimal 30 titik koordinat trail, (2) Visual Enhancement - trail dengan efek bayangan merah gradient, glow effect, dan fade transition yang digambar menggunakan multiple layer dengan shadow offset, (3) Smart Reset Logic - trail otomatis direset saat user mengganti jari, beralih ke gesture open hand, atau membuat fist gesture, dan (4) Performance Optimization - menambahkan parameter konfigurasi trail (trail_max_length, trail_min_distance, trail_thickness) serta optimasi rendering dengan menggambar trail di background layer sebelum efek api untuk mencegah overlap visual.|
 | 7      | [31/05/2025]  | -Penyelesaian Laporan Akhir|
 
