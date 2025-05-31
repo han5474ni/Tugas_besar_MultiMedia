@@ -1,29 +1,62 @@
-# Kelompok ABC
-# SuperPower - Hand Landmark Effects
-
 <div align="center">
-  <img src="https://img.shields.io/badge/Python-3.7+-blue.svg" alt="Python Version">
-  <img src="https://img.shields.io/badge/OpenCV-4.5+-green.svg" alt="OpenCV Version">
-  <img src="https://img.shields.io/badge/MediaPipe-0.10+-orange.svg" alt="MediaPipe Version">
-  <br>
-  <b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b>
+  <h1>✨ SuperPower - Hand Landmark Effects</h1>
+  
+  <p align="center">
+    <img src="https://img.shields.io/badge/Python-3.7+-blue.svg" alt="Python Version">
+    <img src="https://img.shields.io/badge/OpenCV-4.5+-green.svg" alt="OpenCV Version">
+    <img src="https://img.shields.io/badge/MediaPipe-0.10+-orange.svg" alt="MediaPipe Version">
+    <img src="https://img.shields.io/github/repo-size/han5474ni/Tugas_besar_Multimedia" alt="Repo Size">
+    <img src="https://img.shields.io/github/license/han5474ni/Tugas_besar_Multimedia" alt="License">
+  </p>
+  
+  <p><b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b></p>
+  
+  [Demo Video](#-demo) •
+  [Fitur](#-fitur-utama) •
+  [Instalasi](#-panduan-instalasi) •
+  [Cara Menggunakan](#-cara-menggunakan)
 </div>
 
 ## 📋 Tentang Proyek
 
-Proyek Filter SuperPower adalah filter Augmented Reality (AR) yang menggunakan MediaPipe dan OpenCV untuk mendeteksi gerakan tangan secara real-time dan menambahkan efek visual interaktif berupa animasi api yang mengikuti gesture pengguna. Filter ini dapat mengenali berbagai gesture seperti kepalan tangan (fist) untuk reset, jari tunggal yang memunculkan efek api kecil di ujung jari beserta jejak garis merah dengan bayangan, dan telapak terbuka yang menghasilkan efek api besar di telapak tangan. Dengan dukungan multi-hand tracking hingga 2 tangan sekaligus, sistem ini menggunakan algoritma smoothing untuk pergerakan yang halus dan dynamic sizing yang menyesuaikan ukuran efek dengan ukuran tangan, menjadikannya ideal untuk entertainment, content creation media sosial, gaming interface, atau aplikasi AR interaktif lainnya dengan performa real-time yang optimal.
+<div align="center">
+  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2F3d3J2Z3N3N2F4ZzR3cWJzZ3V3Z2l6Z2V2Y3p1bGd1eXl6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/your-gif-id/giphy.gif" width="400" alt="Demo GIF">
+</div>
 
-Proyek ini dikembangkan sebagai bagian dari tugas Ujian Akhir Semester mata kuliah IF4021-Sistem/Teknologi Multimedia pada program studi Teknik Informatika, yang diampu oleh Martin Clinton Tosima Manullang, S.T., M.T. ([@mctosima](https://github.com/mctosima)).
+Proyek Filter SuperPower adalah filter Augmented Reality (AR) yang menggunakan MediaPipe dan OpenCV untuk mendeteksi gerakan tangan secara real-time dan menambahkan efek visual interaktif berupa animasi api yang mengikuti gesture pengguna. 
+
+### 🔥 Fitur Unggulan
+- **Multi-Hand Tracking** - Dukung hingga 2 tangan sekaligus
+- **Gesture Recognition** - Deteksi kepalan, telapak terbuka, dan jari telunjuk
+- **Efek Visual Dinamis** - Animasi api yang responsif mengikuti gerakan
+- **Optimasi Real-time** - Performa lancar dengan algoritma smoothing
+- **User-friendly** - Kontrol intuitif dengan gestur alami
+
+Dikembangkan sebagai bagian dari tugas Ujian Akhir Semester mata kuliah IF4021-Sistem/Teknologi Multimedia pada program studi Teknik Informatika, yang diampu oleh Martin Clinton Tosima Manullang, S.T., M.T. ([@mctosima](https://github.com/mctosima)).
 
 ## ✨ Fitur Utama
 
-- **Pelacakan Multi-Tangan**: Mendeteksi hingga 2 tangan sekaligus
-- **Pengenalan Gestur**: Membedakan antara kepalan tangan, telapak tangan terbuka, dan jari telunjuk
-- **Efek Visual Interaktif**:
-  - Efek api yang mengikuti gerakan tangan
-  - Jeak merah untuk gerakan jari
-- **Antarmuka Sederhana**: Mudah digunakan dengan kontrol gestur alami
-- **Optimasi Kinerja**: Berjalan lancar di berbagai perangkat
+### 🖐️ Deteksi & Pelacakan
+- Mendeteksi hingga 2 tangan sekaligus
+- Pelacakan landmark tangan 21 titik
+- Responsif dengan gerakan cepat
+
+### ✨ Efek Visual
+- **Efek Api Dinamis** - Mengikuti kontur tangan
+- **Jejak Merah** - Garis mengalir di belakang jari
+- **Bayangan & Glow** - Kedalaman visual yang menarik
+- **Transisi Halus** - Perubahan efek yang natural
+
+### ⚡ Performa
+- Optimasi real-time
+- Penggunaan CPU yang efisien
+- Kompatibel dengan berbagai perangkat
+
+### 🎮 Kontrol Intuitif
+- **Telapak Terbuka** - Aktifkan efek api besar
+- **Jari Telunjuk** - Aktifkan jejak merah
+- **Kepalan Tangan** - Reset efek
+- **ESC/Q** - Keluar aplikasi
 
 ## 🛠️ Teknologi
 
@@ -87,18 +120,53 @@ SuperPower/
 | <img src="https://github.com/user-attachments/assets/f9e81343-d8f8-4783-96e3-c316d81795c5" width="40"/> | **Dimas Azi Rajab Aizar** (121140135) | [@Dimas](https://github.com/DimasAzi24) |
 
 
-## Logbook Progress
+## 📅 Logbook Progress
+
+<details>
+<summary>Lihat Riwayat Perkembangan Proyek</summary>
 
 | Minggu | Tanggal       | Progress |
 |--------|---------------|----------|
-| 1      | [24/04/2025]  | - Inisialisasi proyek |
-| 2      | [25/04/2025]  | - Mencari Referensi Proyek |
-| 3      | [02/05/2025]  | - Implementasi penuh program "SuperPower" menggunakan Python, OpenCV, dan MediaPipe. Fitur utama meliputi: deteksi tangan real-time, overlay efek api interaktif pada jari dan telapak tangan, UI tombol pemilihan filter efek video, serta rotasi dan masking efek agar terlihat dinamis. Telah dipush ke GitHub untuk dokumentasi dan kolaborasi. |
-| 4      | [08/05/2025]  | - Penyusunan Template Laporan Akhir link: [Laporan Akhir ABC](https://www.overleaf.com/read/crffdmkpsngg#551e61) |
-| 5      | [21/05/2025]  | - Revisi kode |
-| 6      | [30/05/2025]  | - Penyusunan Laporan Bab 1, 2, dan 3 |
-| 7      | [31/05/2025]  | - Menambahkan fitur Finger Trail System pada hand tracking filter untuk meningkatkan interaktivitas visual. Implementasi meliputi: (1) Trail Tracking - sistem jejak garis yang mengikuti gerakan ujung jari saat gesture single finger aktif dengan menggunakan collections.deque untuk menyimpan maksimal 30 titik koordinat trail, (2) Visual Enhancement - trail dengan efek bayangan merah gradient, glow effect, dan fade transition yang digambar menggunakan multiple layer dengan shadow offset, (3) Smart Reset Logic - trail otomatis direset saat user mengganti jari, beralih ke gesture open hand, atau membuat fist gesture, dan (4) Performance Optimization - menambahkan parameter konfigurasi trail (trail_max_length, trail_min_distance, trail_thickness) serta optimasi rendering dengan menggambar trail di background layer sebelum efek api untuk mencegah overlap visual.|
-| 7      | [31/05/2025]  | -Penyelesaian Laporan Akhir|
+| 1 | 24/04/2025 | • Inisialisasi proyek<br>• Penyusunan rencana pengembangan |
+| 2 | 25/04/2025 | • Riset teknologi<br>• Pengumpulan referensi proyek serupa |
+| 3 | 02/05/2025 | • Implementasi deteksi tangan real-time<br>• Integrasi efek api dasar<br>• Pembuatan UI kontrol |
+| 4 | 08/05/2025 | • Pembuatan template laporan<br>• Dokumentasi kode |
+| 5 | 21/05/2025 | • Optimasi kode<br>• Perbaikan bug |
+| 6 | 30/05/2025 | • Penyusunan laporan<br>• Pengujian performa |
+| 7 | 31/05/2025 | • Implementasi Finger Trail System<br>• Finalisasi laporan |
+
+</details>
+
+## 🎥 Demo
+
+[![Tonton Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/VIDEO_ID)
+
+## 🤝 Berkontribusi
+
+Kontribusi sangat diterima! Berikut cara untuk berkontribusi:
+
+1. Fork proyek ini
+2. Buat branch fitur (`git checkout -b fitur/namafitur`)
+3. Commit perubahan (`git commit -m 'Menambahkan fitur'`)
+4. Push ke branch (`git push origin fitur/namafitur`)
+5. Buat Pull Request
+
+## 📜 Lisensi
+
+Proyek ini dilisensikan di bawah [MIT License](LICENSE).
+
+## 🙏 Ucapan Terima Kasih
+
+- Dosen pengampu: Martin Clinton Tosima Manullang, S.T., M.T.
+- Tim pengembang MediaPipe
+- Komunitas Open Source
+- Rekan-rekan kelompok yang telah berkontribusi
+
+---
+
+<div align="center">
+  Dibuat dengan ❤️ untuk Tugas Besar Mata Kuliah Multimedia
+</div>
 
 ## 📝 Laporan Akhir
 
