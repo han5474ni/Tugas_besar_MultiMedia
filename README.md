@@ -83,9 +83,10 @@ SuperPower/
 # Anggota Tim
 <img src="https://ik.imagekit.io/fliiaytbv/Cuplikan%20layar%202025-05-08%20111417.png?updatedAt=1746678657462" alt="Yani" width="40"/> | **Handayani** (122140166) | [@handayani](https://github.com/han5474ni) |
 |------------------------------------|----------------------------------|--------------------------------------|
-| ![francois](![image](https://github.com/user-attachments/assets/e6e42d96-1efe-4c66-89ae-a4e16cb57a2e)
+| ![francois](![image](https://github.com/user-attachments/assets/e6e42d96-1efe-4c66-89ae-a4e16cb57a2e) width="40"/
 ) | **Francois Novalentino Sinurat** (121140007) | [@Francois](https://github.com/FrancoisSinurat) |
-| ![dimas](![image](https://github.com/user-attachments/assets/f9e81343-d8f8-4783-96e3-c316d81795c5)) | **Dimas Azi Rajab Aizar** (121140135) | [@Dimas](https://github.com/DimasAzi24) |
+| ![dimas](![image](https://github.com/user-attachments/assets/f9e81343-d8f8-4783-96e3-c316d81795c5)
+) | **Dimas Azi Rajab Aizar** (121140135) | [@Dimas](https://github.com/DimasAzi24) |
 
 ## Logbook Progress
 
