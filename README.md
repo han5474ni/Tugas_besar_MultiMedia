@@ -6,7 +6,6 @@
     <img src="https://img.shields.io/badge/OpenCV-4.5+-green.svg" alt="OpenCV Version">
     <img src="https://img.shields.io/badge/MediaPipe-0.10+-orange.svg" alt="MediaPipe Version">
     <img src="https://img.shields.io/github/repo-size/han5474ni/Tugas_besar_Multimedia" alt="Repo Size">
-    <img src="https://img.shields.io/github/license/han5474ni/Tugas_besar_Multimedia" alt="License">
   </p>
   
   <p><b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b></p>
