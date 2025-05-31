@@ -11,7 +11,7 @@
   
   <p><b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b></p>
   
-  [Demo Video](#-demo) •
+  [Demo Video](https://youtu.be/OW3rP_mNTUo) •
   [Fitur](#-fitur-utama) •
   [Instalasi](#-panduan-instalasi) •
   [Cara Menggunakan](#-cara-menggunakan)
@@ -20,7 +20,7 @@
 ## 📋 Tentang Proyek
 
 <div align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2F3d3J2Z3N3N2F4ZzR3cWJzZ3V3Z2l6Z2V2Y3p1bGd1eXl6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/your-gif-id/giphy.gif" width="400" alt="Demo GIF">
+  <img src="https://youtu.be/OW3rP_mNTUo" width="400" alt="Demo GIF">
 </div>
 
 Proyek Filter SuperPower adalah filter Augmented Reality (AR) yang menggunakan MediaPipe dan OpenCV untuk mendeteksi gerakan tangan secara real-time dan menambahkan efek visual interaktif berupa animasi api yang mengikuti gesture pengguna. 
