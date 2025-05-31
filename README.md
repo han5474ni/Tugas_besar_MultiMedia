@@ -6,7 +6,7 @@
   <img src="https://img.shields.io/badge/OpenCV-4.5+-green.svg" alt="OpenCV Version">
   <img src="https://img.shields.io/badge/MediaPipe-0.10+-orange.svg" alt="MediaPipe Version">
   <br>
-  <b>Real-time hand tracking with interactive visual effects using Python, OpenCV, and MediaPipe</b>
+  <b>Real-time hand tracking with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b>
 </div>
 
 ## 📋 Tentang Proyek
@@ -37,8 +37,8 @@ Proyek ini dikembangkan sebagai bagian dari tugas Ujian Akhir Semester mata kuli
 
 1. **Clone Repository**
    ```bash
-   git clone https://github.com/username/SuperPower.git
-   cd SuperPower
+   git clone https://github.com/han5474ni/Tugas_besar_Multimedia.git
+   cd Tugas_besar_Multimedia
    ```
 
 2. **Buat dan Aktifkan Virtual Environment**
