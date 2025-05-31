@@ -11,7 +11,7 @@
 
 ## 📋 Tentang Proyek
 
-Proyek Filter SuperPower adalah aplikasi berbasis Python yang dirancang untuk memberikan efek visual interaktif berupa ledakan partikel atau api yang mengikuti gerakan tangan pengguna. Aplikasi ini menggunakan teknologi MediaPipe untuk mendeteksi posisi dan gerakan tangan secara real-time, kemudian menambahkan efek visual dinamis yang muncul saat pengguna melakukan gestur tertentu seperti melambai atau menghentakkan tangan.
+Proyek Filter SuperPower adalah filter Augmented Reality (AR) yang menggunakan MediaPipe dan OpenCV untuk mendeteksi gerakan tangan secara real-time dan menambahkan efek visual interaktif berupa animasi api yang mengikuti gesture pengguna. Filter ini dapat mengenali berbagai gesture seperti kepalan tangan (fist) untuk reset, jari tunggal yang memunculkan efek api kecil di ujung jari beserta jejak garis merah dengan bayangan, dan telapak terbuka yang menghasilkan efek api besar di telapak tangan. Dengan dukungan multi-hand tracking hingga 2 tangan sekaligus, sistem ini menggunakan algoritma smoothing untuk pergerakan yang halus dan dynamic sizing yang menyesuaikan ukuran efek dengan ukuran tangan, menjadikannya ideal untuk entertainment, content creation media sosial, gaming interface, atau aplikasi AR interaktif lainnya dengan performa real-time yang optimal.
 
 Proyek ini dikembangkan sebagai bagian dari tugas Ujian Akhir Semester mata kuliah IF4021-Sistem/Teknologi Multimedia pada program studi Teknik Informatika, yang diampu oleh Martin Clinton Tosima Manullang, S.T., M.T. ([@mctosima](https://github.com/mctosima)).
 
@@ -22,7 +22,6 @@ Proyek ini dikembangkan sebagai bagian dari tugas Ujian Akhir Semester mata kuli
 - **Efek Visual Interaktif**:
   - Efek api yang mengikuti gerakan tangan
   - Jeak merah untuk gerakan jari
-  - Ukuran efek yang menyesuaikan dengan jarak tangan dari kamera
 - **Antarmuka Sederhana**: Mudah digunakan dengan kontrol gestur alami
 - **Optimasi Kinerja**: Berjalan lancar di berbagai perangkat
 
