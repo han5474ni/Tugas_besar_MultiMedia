@@ -38,6 +38,11 @@ class HandEffectTracker:
             'stability_threshold': 15,   # Minimum movement to update position
             'finger_effect_size': 80,    # Size for single finger effects
             'finger_size_scale': 0.8,    # Scale factor for finger effects
+            # Trail configuration
+            'trail_max_length': 30,      # Maximum number of trail points
+            'trail_min_distance': 8,     # Minimum distance between trail points
+            'trail_thickness': 8,        # Trail line thickness
+            'trail_fade_steps': 15,      # Number of fade steps for trail
         }
         
         # Cache frequently used values
@@ -203,6 +208,61 @@ class HandEffectTracker:
         except Exception as e:
             print(f"Overlay error: {e}")
     
+    def _draw_finger_trail(self, frame: np.ndarray, trail_points: List[Tuple[int, int]]) -> None:
+        """Draw finger trail with shadow effect"""
+        if len(trail_points) < 2:
+            return
+        
+        # Create shadow effect by drawing multiple lines with decreasing opacity
+        shadow_offsets = [(2, 2), (1, 1), (0, 0)]  # Shadow offsets
+        shadow_colors = [(0, 0, 100), (0, 0, 150), (0, 0, 255)]  # Dark red to bright red
+        
+        for offset_idx, (dx, dy) in enumerate(shadow_offsets):
+            for i in range(1, len(trail_points)):
+                # Calculate fade factor based on position in trail
+                fade_factor = (i / len(trail_points)) * 0.8 + 0.2  # 0.2 to 1.0
+                
+                # Get points with shadow offset
+                pt1 = (trail_points[i-1][0] + dx, trail_points[i-1][1] + dy)
+                pt2 = (trail_points[i][0] + dx, trail_points[i][1] + dy)
+                
+                # Calculate thickness with fade
+                thickness = int(self.config['trail_thickness'] * fade_factor)
+                thickness = max(1, thickness)
+                
+                # Get color with fade
+                base_color = shadow_colors[offset_idx]
+                color = tuple(int(c * fade_factor) for c in base_color)
+                
+                # Draw line segment
+                cv2.line(frame, pt1, pt2, color, thickness)
+                
+                # Add glow effect for the main trail (no offset)
+                if offset_idx == 2:  # Main trail
+                    # Draw a thinner, brighter line on top
+                    glow_thickness = max(1, thickness // 2)
+                    glow_color = (50, 50, 255)  # Brighter red
+                    cv2.line(frame, pt1, pt2, glow_color, glow_thickness)
+    
+    def _update_finger_trail(self, state: Dict, current_pos: Tuple[int, int], current_finger: str) -> None:
+        """Update finger trail points"""
+        # Initialize trail if needed
+        if 'trail_points' not in state:
+            state['trail_points'] = collections.deque(maxlen=self.config['trail_max_length'])
+            state['last_trail_finger'] = None
+        
+        # Reset trail if finger changed or if switching from non-single finger gesture
+        if (state['last_trail_finger'] != current_finger or 
+            not current_finger.startswith('single_')):
+            state['trail_points'].clear()
+            state['last_trail_finger'] = current_finger
+            
+        # Add point to trail if it's far enough from the last point
+        if (len(state['trail_points']) == 0 or 
+            math.sqrt((current_pos[0] - state['trail_points'][-1][0])**2 + 
+                     (current_pos[1] - state['trail_points'][-1][1])**2) >= self.config['trail_min_distance']):
+            state['trail_points'].append(current_pos)
+    
     def _update_hand_state(self, hand_idx: int, landmarks, frame_dims: Tuple[int, int]) -> None:
         """Update hand state with improved smoothing and stability"""
         min_dim = min(frame_dims)
@@ -215,14 +275,23 @@ class HandEffectTracker:
                 'position_history': collections.deque(maxlen=5),
                 'is_stable': False,
                 'current_gesture': 'unknown',
-                'finger_position': None
+                'finger_position': None,
+                'trail_points': collections.deque(maxlen=self.config['trail_max_length']),
+                'last_trail_finger': None
             }
         
         state = self.hand_states[hand_idx]
         
         # Detect current gesture
         gesture, finger_pos = self._detect_gesture(landmarks)
+        previous_gesture = state['current_gesture']
         state['current_gesture'] = gesture
+        
+        # Reset trail if gesture changed from single finger to something else
+        if (previous_gesture.startswith('single_') and 
+            not gesture.startswith('single_')):
+            state['trail_points'].clear()
+            state['last_trail_finger'] = None
         
         # Reset if fist detected
         if gesture == "fist":
@@ -231,6 +300,8 @@ class HandEffectTracker:
                 'position_history': collections.deque(maxlen=5),
                 'is_stable': False, 'finger_position': None
             })
+            state['trail_points'].clear()
+            state['last_trail_finger'] = None
             return
         
         # Calculate positions based on gesture
@@ -240,6 +311,9 @@ class HandEffectTracker:
                 cx, cy = finger_pos
                 cx_px, cy_px = int(cx * min_dim), int(cy * min_dim)
                 state['finger_position'] = (cx_px, cy_px)
+                
+                # Update finger trail
+                self._update_finger_trail(state, (cx_px, cy_px), gesture)
                 
                 # Use smaller effect size for single finger
                 current_hand_size = self._calculate_hand_size(landmarks, frame_dims)
@@ -253,6 +327,11 @@ class HandEffectTracker:
             cx, cy, cz = self._calculate_palm_center(landmarks)
             cx_px, cy_px = int(cx * min_dim), int(cy * min_dim)
             state['finger_position'] = None
+            
+            # Clear trail for non-single finger gestures
+            if previous_gesture.startswith('single_'):
+                state['trail_points'].clear()
+                state['last_trail_finger'] = None
             
             # Use normal effect size for open hand
             current_hand_size = self._calculate_hand_size(landmarks, frame_dims)
@@ -316,8 +395,15 @@ class HandEffectTracker:
             for hand_idx, hand_landmarks in enumerate(results.multi_hand_landmarks):
                 self._update_hand_state(hand_idx, hand_landmarks.landmark, (h, w))
                 
-                # Render effect if hand is stable
+                # Get hand state
                 state = self.hand_states[hand_idx]
+                
+                # Draw finger trail first (behind the effect)
+                if (state['current_gesture'].startswith('single_') and 
+                    len(state['trail_points']) > 1):
+                    self._draw_finger_trail(frame_square, list(state['trail_points']))
+                
+                # Render effect if hand is stable
                 if (state['is_stable'] and state['smooth_x'] is not None and 
                     state['smooth_size'] is not None and "efek-api-unscreen" in self.effects):
                     
@@ -360,7 +446,8 @@ class HandEffectTracker:
                     
                     # Debug text showing gesture and size
                     gesture_name = state['current_gesture'].replace('single_', '').title() if state['current_gesture'].startswith('single_') else 'Open Hand'
-                    debug_text = f"Hand {hand_idx + 1}: {gesture_name} | Size={effect_size}"
+                    trail_info = f" | Trail: {len(state['trail_points'])}" if state['current_gesture'].startswith('single_') else ""
+                    debug_text = f"Hand {hand_idx + 1}: {gesture_name} | Size={effect_size}{trail_info}"
                     cv2.putText(frame_square, debug_text, (10, 40 + 30 * hand_idx),
                               cv2.FONT_HERSHEY_SIMPLEX, 0.6, (0, 255, 0), 2)
         
@@ -382,7 +469,7 @@ class HandEffectTracker:
                     break
                 
                 processed_frame = self.process_frame(frame)
-                cv2.imshow("Optimized Hand Effects", processed_frame)
+                cv2.imshow("Hand Effects with Finger Trail", processed_frame)
                 
                 key = cv2.waitKey(1) & 0xFF
                 if key == 27 or key == ord('q'):  # ESC or 'q' to quit
@@ -400,12 +487,13 @@ def main():
         print("No effects loaded. Please ensure 'effects' folder exists with GIF files.")
         return
     
-    print("Starting hand effect tracker...")
+    print("Starting hand effect tracker with finger trail...")
     print("Press ESC or 'q' to quit")
     print("Gestures:")
-    print("- Make a fist to reset hand tracking")
-    print("- Show single finger for fingertip fire effect")
-    print("- Open hand for palm fire effect")
+    print("- Make a fist to reset hand tracking and trail")
+    print("- Show single finger for fingertip fire effect with red trail")
+    print("- Open hand for palm fire effect (trail will be cleared)")
+    print("- Switch between different single fingers to reset trail")
     
     tracker.run()
 
