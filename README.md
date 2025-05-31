@@ -19,10 +19,7 @@
 
 ## 📋 Tentang Proyek
 
-<div align="center">
-  <img src="![efek-api-unscreen](https://github.com/user-attachments/assets/2f178cd1-858e-4248-a6e7-f927008f3b7c)
-" width="400" alt="Demo GIF">
-</div>
+![Demo GIF](https://github.com/user-attachments/assets/2f178cd1-858e-4248-a6e7-f927008f3b7c/efek-api-unscreen.gif)
 
 Proyek Filter SuperPower adalah filter Augmented Reality (AR) yang menggunakan MediaPipe dan OpenCV untuk mendeteksi gerakan tangan secara real-time dan menambahkan efek visual interaktif berupa animasi api yang mengikuti gesture pengguna. 
 
