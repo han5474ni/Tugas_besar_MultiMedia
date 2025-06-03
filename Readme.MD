@@ -6,12 +6,11 @@
     <img src="https://img.shields.io/badge/OpenCV-4.5+-green.svg" alt="OpenCV Version">
     <img src="https://img.shields.io/badge/MediaPipe-0.10+-orange.svg" alt="MediaPipe Version">
     <img src="https://img.shields.io/github/repo-size/han5474ni/Tugas_besar_Multimedia" alt="Repo Size">
-    <img src="https://img.shields.io/github/license/han5474ni/Tugas_besar_Multimedia" alt="License">
   </p>
   
   <p><b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b></p>
   
-  [Demo Video](#-demo) •
+  [Demo Video](https://youtu.be/OW3rP_mNTUo) •
   [Fitur](#-fitur-utama) •
   [Instalasi](#-panduan-instalasi) •
   [Cara Menggunakan](#-cara-menggunakan)
@@ -19,9 +18,7 @@
 
 ## 📋 Tentang Proyek
 
-<div align="center">
-  <img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExc2F3d3J2Z3N3N2F4ZzR3cWJzZ3V3Z2l6Z2V2Y3p1bGd1eXl6bSZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/your-gif-id/giphy.gif" width="400" alt="Demo GIF">
-</div>
+![Demo GIF](https://raw.githubusercontent.com/han5474ni/Tugas_besar_MultiMedia/main/effects/efek-api-unscreen.gif)
 
 Proyek Filter SuperPower adalah filter Augmented Reality (AR) yang menggunakan MediaPipe dan OpenCV untuk mendeteksi gerakan tangan secara real-time dan menambahkan efek visual interaktif berupa animasi api yang mengikuti gesture pengguna. 
 
@@ -128,7 +125,7 @@ SuperPower/
 | Minggu | Tanggal       | Progress |
 |--------|---------------|----------|
 | 1 | 24/04/2025 | • Inisialisasi proyek<br>• Penyusunan rencana pengembangan |
-| 2 | 25/04/2025 | • Riset teknologi<br>• Pengumpulan referensi proyek serupa |
+| 2 | 25/04/2025 | • Riset teknologi<br>• Pengumpulan referensi proyek serupa <br>• https://vt.tiktok.com/ZSrvavKEX/ |
 | 3 | 02/05/2025 | • Implementasi deteksi tangan real-time<br>• Integrasi efek api dasar<br>• Pembuatan UI kontrol |
 | 4 | 08/05/2025 | • Pembuatan template laporan<br>• Dokumentasi kode |
 | 5 | 21/05/2025 | • Optimasi kode<br>• Perbaikan bug |
@@ -139,7 +136,8 @@ SuperPower/
 
 ## 🎥 Demo
 
-[![Tonton Demo](https://img.youtube.com/vi/VIDEO_ID/0.jpg)](https://youtu.be/VIDEO_ID)
+[![Tonton Demo](https://img.youtube.com/vi/OW3rP_mNTUo/0.jpg)](https://youtu.be/OW3rP_mNTUo)
+
 
 ## 🤝 Berkontribusi
 
@@ -151,15 +149,9 @@ Kontribusi sangat diterima! Berikut cara untuk berkontribusi:
 4. Push ke branch (`git push origin fitur/namafitur`)
 5. Buat Pull Request
 
-## 📜 Lisensi
-
-Proyek ini dilisensikan di bawah [MIT License](LICENSE).
-
 ## 🙏 Ucapan Terima Kasih
 
 - Dosen pengampu: Martin Clinton Tosima Manullang, S.T., M.T.
-- Tim pengembang MediaPipe
-- Komunitas Open Source
 - Rekan-rekan kelompok yang telah berkontribusi
 
 ---
@@ -167,13 +159,3 @@ Proyek ini dilisensikan di bawah [MIT License](LICENSE).
 <div align="center">
   Dibuat dengan ❤️ untuk Tugas Besar Mata Kuliah Multimedia
 </div>
-
-## 📝 Laporan Akhir
-
-Template laporan akhir dapat diakses di [Overleaf](https://www.overleaf.com/7171988215mcwqvnjyscxm#abf677).
-
----
-<div align="center">
-  Dibuat dengan ❤️ untuk IF4021 - Sistem/Teknologi Multimedia
-</div>
-
