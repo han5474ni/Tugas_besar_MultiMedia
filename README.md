@@ -136,7 +136,8 @@ SuperPower/
 
 ## 🎥 Demo
 
-[![Tonton Demo](https://img.youtube.com/vi/OW3rP_mNTUo/0.jpg)](https://youtu.be/OW3rP_mNTUo)
+[![Tonton Demo](https://youtu.be/OW3rP_mNTUo)
+[![Tonton Demo](https://youtu.be/MoOCuSg1Aos?si=25CbY0WtLoxxRG-c)
 
 
 ## 🤝 Berkontribusi
