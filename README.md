@@ -159,13 +159,3 @@ Kontribusi sangat diterima! Berikut cara untuk berkontribusi:
 <div align="center">
   Dibuat dengan ❤️ untuk Tugas Besar Mata Kuliah Multimedia
 </div>
-
-## 📝 Laporan Akhir
-
-Template laporan akhir dapat diakses di [Overleaf](https://www.overleaf.com/7171988215mcwqvnjyscxm#abf677).
-
----
-<div align="center">
-  Dibuat dengan ❤️ untuk IF4021 - Sistem/Teknologi Multimedia
-</div>
-
