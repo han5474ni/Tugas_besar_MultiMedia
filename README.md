@@ -10,7 +10,7 @@
   
   <p><b>Real-time hand landmark with interactive visual effects Superpower using Python, OpenCV, and MediaPipe</b></p>
   
-  [Demo Video](https://youtu.be/OW3rP_mNTUo) •
+  [Demo Video](#-Demo) •
   [Fitur](#-fitur-utama) •
   [Instalasi](#-panduan-instalasi) •
   [Cara Menggunakan](#-cara-menggunakan)
