@@ -139,17 +139,6 @@ SuperPower/
 [![Tonton Demo 1](https://img.youtube.com/vi/OW3rP_mNTUo/0.jpg)](https://youtu.be/OW3rP_mNTUo)
 [![Tonton Demo 2](https://img.youtube.com/vi/MoOCuSg1Aos/0.jpg)](https://youtu.be/MoOCuSg1Aos?si=25CbY0WtLoxxRG-c)
 
-
-## 🤝 Berkontribusi
-
-Kontribusi sangat diterima! Berikut cara untuk berkontribusi:
-
-1. Fork proyek ini
-2. Buat branch fitur (`git checkout -b fitur/namafitur`)
-3. Commit perubahan (`git commit -m 'Menambahkan fitur'`)
-4. Push ke branch (`git push origin fitur/namafitur`)
-5. Buat Pull Request
-
 ## 🙏 Ucapan Terima Kasih
 
 - Dosen pengampu: Martin Clinton Tosima Manullang, S.T., M.T.
